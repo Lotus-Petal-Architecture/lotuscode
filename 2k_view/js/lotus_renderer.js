@@ -1,4 +1,4 @@
-//Copyright 2021 by Lotus.fm LLC, 2000_view
+//Copyright 2021 by Lotus.fm LLC
 
 var camera, scene, raycaster, renderer, parentTransform
 var mouse = new THREE.Vector2()
@@ -139,10 +139,6 @@ function assignLinks () //this assigns k values to the ranked link ids, so that 
 }
 
 assignLinks();
-
-
-//console.log(link_order)
-//console.log(sku_names)
 
 
 
@@ -416,38 +412,6 @@ drawPetalRing (14, .85, .1, 0x0289b6, 700, 50)  //middle petals
 drawPetalRing (16, 1, 0,  0x0099cc, 800, 50)  //outer petals
 
 
-/*function getData() //processes JSON data and returns arrays for 5 main variables
-  {
-
-if(myObj.data.length > 0) {
-  for (var i = 0; i < myObj.data.length; i++) {
-    var sku = myObj.data[i];
-    //console.log(entry);
-    var sku_name = sku.name;
-    sku_name = sku_name.replace(/\s/g, "-");
-    //console.log(sku.name);
-    //console.log(sku.id);
-    //var sku_priceusd = sku.quote.USD.price;
-    //var percent_change_24h = percent_change_24h;
-    //document.write(i+' - '+sku_name+' : $'+sku_priceusd+'<br />');
-    //sku_name = String(sku_name);
-    sku_names.push([sku_name]);
-    //sku_names[sku_names.length]=sku_name;
-    description[description.length] = sku.quote.USD.description;
-    unit_prices[unit_prices.length] = sku.quote.USD.price;
-    sales_change_30d[sales_change_30d.length] = sku.quote.USD.percent_change_24h;
-    sku_change_1h[sku_change_1h.length] = sku.quote.USD.percent_change_1h;
-    sku_change_1w[sku_change_1w.length] = sku.quote.USD.percent_change_7d;
-    volume[volume.length] = sku.quote.USD.volume_24h;
-    }
-  }
-  }
-  } 
-}
-
-getData();*/
-
-
 getActiveLinks();
 addLinks();
 render();
@@ -457,21 +421,6 @@ document.getElementById('nowplaying').innerHTML =
 
 function getActiveLinks()  //sorts for a given set of values from the data obtained above
 {
-
-    /*if (sku_change_time == "1h") 
-      {
-        var active_array = sku_change_1h;
-      }
-
-    if (sku_change_time == "24h") 
-      {
-        var active_array = 24h;
-      }
-
-    if (sku_change_time == "1w") 
-      {
-        var active_array = sku_change_1w;
-      }*/
 
     var f = active_array.entries();
 
@@ -575,26 +524,10 @@ for (i = 0; i < link_order_length; i++) {
       var sku_change_float=sales_change_30d[l];
       var sku_change = sku_change_float * 100;
       sku_change = sku_change.toFixed();
-      /*var unit_float=unit_prices[l]
-      var unit_price = sku_float.toFixed(2);
-      */
-      /*if (sku_change_float > 20)
-      {
-        document.getElementById('nowplaying').innerHTML =
-      '<b>SKU</b><br><br>' + sku_names[l] + '&nbsp; &nbsp;' + '$' + sku_price + '&nbsp; &nbsp;' + '<span style="color:#e45e9d; font-weight:bold;">' + sku_change + '%</span>'
-      }
-      else if (sku_change_float > 5)
-            {
-        document.getElementById('nowplaying').innerHTML =
-      '<b>SKU</b><br><br>' + sku_names[l] + '&nbsp; &nbsp;' + '$' + sku_price + '&nbsp; &nbsp;' + '<span style="color:#ffca85; font-weight:bold;">' + sku_change + '%</span>'
-            }
-      else*/
-         document.getElementById('nowplaying').innerHTML =
+      document.getElementById('nowplaying').innerHTML =
       '<br><b>SKU</b>: ' + sku_names[l] + '&nbsp; &nbsp;'  + '<br><b>Description:</b> ' + description[l] + '&nbsp; &nbsp;' + '<br><b>Unit Price:</b> ' + '$' + unit_prices[l] + '&nbsp; &nbsp;' +  
       '<b>Total Sales:</b> ' + '$' + total_sales[l] + '&nbsp; &nbsp;' + '<br><b>30-Day Sales Trend:</b>' + '&nbsp; &nbsp;' + sku_change + '%' +
       '<br><b>Store #:</b> ' + store_id[l] + '&nbsp; &nbsp;' + '<b>Region:</b> ' + region[l]  + '<br><b>Quantity Remaining:</b> ' + active_array[l]
-      /* + '<span style="color:#0099cc;">' + sku_change + '%</span>'
-*/
 
             }
 
