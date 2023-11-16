@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset=utf-8
+		 Copyright 2021 by Lotus.fm LLC>
+		<title>Lotus Chart</title>
+		<link rel="stylesheet" href="css/styles.css" />
+	
+	<script type="text/javascript">
+
+	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+ 		window.location.replace("https://web.lotus.fm");
+	}
+	</script>
+	
+	</head>
+	
+	<body>
+		<div id ="alternate"> This content is not yet available for mobile devices. Responsive and assistive versions coming soon. 
+			<br><br><a style="color: #fff;" href="https://web.lotus.fm" target="self" onclick="openURL()">Proceed to mobile-friendly site</a>.
+		<script>
+			function openURL() {
+ 			 window.open("https://web.lotus.fm", "_self");
+			}
+		</script></div>
+			<noscript><div id ="alternate" style="display: block;"> Javascript not enabled! Please enable Javascript on your browser to view interactive content.
+			<br><br><a href="https://web.lotus.fm" target="self">Proceed to main Lotus.fm site</a>.</div>
+		<div id="main" style="display: none;"></noscript>
+			<div id="main">
+						<div id="info">World Coin Trends: Change over 24 Hours</div>
+		<div id="nowplaying">'<br><br><br><br></div>
+				<div id="left">
+			<p style="text-align:right;">&nbsp;</p>
+			<p style="text-align:left;"><h3>Lotus Inventory Control Demo</h3>
+			Version 1.0.4</p>	
+			<p style="text-align:left;"><h3>What Is This?</h3>
+			The <b>Lotus Chart</b> is a 3-dimensional data view capable of showing product information, inventory, and sales data for over 2000 SKUs on-screen at the same time.
+			<br>
+			<br>
+			We welcome your <a href="https://web.lotus.fm/contact/">feedback</a>. Text search and mobile support coming soon.</p>
+			<p>
+				<b>Reading the Lotus Chart: </b>&nbsp;&nbsp;
+				</p>
+				<p>
+				Each chart link shows a different SKU. In this example, the links are sorted by total sales per item, per store. The links that are tallest and closest to the center show the items with the highest value. Links that are shorter and in the outer rings show items with lower values.
+				</p>
+				<p>
+				Hover over a chart link to see item info. Click the link to open a new window with further details. Rotate the chart by grabbing its top or bottom edges. Use the mouse wheel to zoom in or out.
+				</p>
+
+		</div>
+		<div id="right">
+			<p style="text-align:right; margin-right: 10px;"><a href="">Reload</a></p>
+			<p style="text-align:left;"><h3 style="padding-bottom: 0; margin-bottom:0;">Sales Snapshot<br>October 6, 2021</h3>
+				<br>
+				<br>
+				1,976 Product Items Shown
+				<br>
+				<br>
+				<span style = "color:#00A86B; font-weight:bold; font-size: 16px;"> Low Stock - 620 Items</span>&nbsp;&nbsp;<br>
+				<span style = "color:#e45e9d; font-weight:bold; font-size: 16px;"> Out of Stock - 425 Items</span>
+			</p>
+
+							<p style="text-align; center; margin-top:20px;">
+			<div style="border-radius: 16px; background-color: #00A86B; padding:8px 22px; text-align: center; margin-right:10px;">
+			<a class="carbon" href="https://docs.google.com/spreadsheets/d/1iJyvTfWhZpPIskWAtf0VoBoxtZsWfDZB/edit?usp=sharing&ouid=101420505253222757184&rtpof=true&sd=true" style="text-decoration:none; font-size:15px; text-align: center;
+			width:100%;">
+			View as Spreadsheet</a></div>
+			</p>
+		</div>
+		<script> 
+		var sku_change_time = "24h";
+		var volume_adj = 0;
+		</script>
+		<script src="build/three.js"></script>
+		<script src="js/controls/OrbitControls.js"></script>
+		<script src="js/lotus_renderer.js"></script>
+	</div>
+	</body>
+</html>
