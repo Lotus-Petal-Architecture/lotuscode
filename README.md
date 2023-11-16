@@ -1,7 +1,9 @@
 # lotuscode
 Source code and sample data files for Lotus Chart 3D interactive data visualization
 
-The Lotus Chart is a new type of experimental UI that combines parametric geometry with hyperlinks to render thousands of clickable Uniform Resource Identifiers (URIs) visible on a single computer screen at the same time, with visual cues providing metadata, context, and navigational hints. The result is an interactive 3D data map, accessible from any web browser. Lines on a Lotus Chart typically represent stock symbols, media content, a web link, or rows within a database. This type of visualization requires no external software and is compatible with most REST API’s.
+The Lotus Chart is a new type of experimental UI that combines parametric geometry with hyperlinks to render thousands of clickable Uniform Resource Identifiers (URIs) visible on a single computer screen at the same time, with visual cues providing metadata, context, and navigational hints. The result is an interactive 3D data map, accessible from any web browser. Lines on a Lotus Chart typically show trading symbols, media content, a web link, or rows within a database. This type of visualization requires no external software and is compatible with most REST API’s.
+
+<a href ="https://web.lotus.fm/examples/">See examples here.</a>
 
 Any type of search filter may be applied but the Lotus Chart structure is well suited for revealing machine learning insights and identifying growth trends across a data ecosystem. Applications include financial analysis, scientific literacy, epidemiology, real estate, e-commerce, marketing analytics, legal e-discovery, entertainment, and information security.
 
